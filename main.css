@@ -6,11 +6,18 @@ body {
   font-family: 'Open Sans', sans-serif;
   min-height: 100%;
   background: #fafafa;
-  color: #555;
   font-size: 18px;
 }
 ul {
   margin-left: 60px;
+}
+pre {
+  background: #222;
+  margin: 30px -30px;
+  padding: 30px 60px;
+  white-space: pre-wrap;
+  color: #555;
+  background: #dedede;
 }
 .faded {
   opacity: 0.2;
@@ -26,6 +33,13 @@ ul {
 .wrapper.solid {
   background: #fff;
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.1);
+}
+.wrapper.full {
+  width: 100%;
+  max-width: none;
+  min-width: 0;
+  float: left;
+  margin: 0 30px 30px;
 }
 .nav {
   z-index: 3;
@@ -63,11 +77,27 @@ ul {
   position: absolute;
   top: 100%;
   width: 100%;
+  margin-top: 30px;
+}
+.body .input {
+  padding: 30px;
+  position: absolute;
+  left: 50%;
+  margin-left: 30px;
+  margin-bottom: 50px;
+  max-width: 1000px;
+  min-width: 700px;
+  font-size: 18px;
+  font-family: 'Open Sans', sans-serif;
+  border: 0 none;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.1);
+  resize: none;
 }
 .body .content {
-  padding: 30px;
+  padding: 30px 30px 1px;
 }
 .body .content p {
+  color: #555;
   margin: 45px 30px;
   line-height: 2em;
 }
@@ -92,8 +122,30 @@ ul {
   position: absolute;
   bottom: -16px;
 }
+.body .content.edit {
+  position: absolute;
+  right: 50%;
+  padding: 30px;
+  background: white;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.1);
+  max-width: 1000px;
+  min-width: 700px;
+}
 .body .footer {
+  clear: both;
   position: absolute;
   margin: 45px 30px;
   padding: 0 30px;
+}
+.body .footer #input {
+  width: 100%;
+  height: 800px;
+  font-size: 1.2em;
+}
+.body.editor .content {
+  margin-bottom: 50px;
+}
+.body.editor .footer {
+  position: absolute;
+  bottom: 0;
 }
