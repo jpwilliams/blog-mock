@@ -10,13 +10,13 @@
     
     <body>
         <div class="masthead">
-            <div class="title">Reden<br>[Re]mote [D]evelopment [En]vironment</div>
+            <div contenteditable="true" class="title" id="title">Reden<br>[Re]mote [D]evelopment [En]vironment</div>
         </div>
         
         <div class="editor body">
             <div class="full wrapper">
-                <div class="content edit" id="content">Stuff goes in here, don't ya know! I know, I know, it seems really silly but at least we do aslidughiaougd foiguhsdf oiughsdo fughdosif ugoisduhf giusdhfg iusdfog iusdofiugh sodiufhg osdiufg osdiufhg osidufgsd</div>
-                <textarea class="input" id="input">Woop woop!</textarea>
+                <div class="content edit" id="content"></div>
+                <textarea class="input" id="input"># Blank</textarea>
             </div>
         </div>
         
@@ -38,7 +38,7 @@
             function update_scroll () {
                 ticking = false
                 
-                if (marking) {
+                if (marking || previewing) {
                     marking = false
                 } else {
                     var window_scroll_y = window.scrollY
@@ -105,6 +105,11 @@
             
             var content = document.getElementById('content')
             var input = document.getElementById('input')
+            var title = document.getElementById('title')
+            
+            title.spellcheck = false
+            title.focus()
+            title.blur()
             
             autosize(input)
             

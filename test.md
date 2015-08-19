@@ -1,3 +1,36 @@
+It feels as if there's a rising trend in game design whereby target audiences are identified, listened to and ditched; a good, sensible feature set is announced, followed by knee-jerk updates intended to appeal to the newer player.
+
+It's understandable; what _business_ would create a game that's exclusively played by a forever-diminishing group of people? I'm here to tell you that it's the _right_ one.
+
+Stay with me.
+
+#[http://cdn.obsidianportal.com/assets/212635/Lab_Floor.jpg] Life-long features
+
+First, let's look at an example of when a good-looking game has been rounded off to provide a more globally-appealing feel: _World of Warcraft_.
+
+This _exceedingly_ popular MMORPG had, a matter a months ago, over 12 million subscribers across the globe. Now, it's lost more than half of that user-base. Throughout game-changing expansions they've tried to clamour back the numbers, though they continue to decrease.
+
+Let's look at the steps that lead to this demise. First, competitors emerged. _Rift_, _Lord of the Rings Online_, _Wildstar_ and _Elder Scrolls Online_ were all big contributors to the loss of subscribers; people wanted something new, which is entirely understandable.
+
+In reaction to this (and after suffering the first downward turn for a number of years), _Blizzard_ began to look for ways to keep the franchise trekking on. The obvious answer was to get new players interested. The issue being that, after 7 years in the making, the game was now so deep and complex to the outside player that picking it up was no easy feat.
+
+_Blizzard_ opted, first, for a scheme called _Recruit a Friend_. It offered zero gameplay impact, but allowed users to invite their friends to achieve cosmetic rewards. A good strategy, were it not for the stereotypical _World of Warcraft_ player not having any friends to invite.
+
+After mere months into the feature, _Blizzard_ started big changes. Once-complex mechanics such as "_Attack Power_" and "_Mana Regeneration_" were amalgamated into grouped statistics, hugely simplifying the understanding of various powers and effects. Now this seems like a fine thing, but for the current user-base it was most definitely not.
+
+Imagine you're a car mechanic (some of you won't have to imagine). You spend years learning the workings of hundreds of different engines and know just how to diagnose and repair a thousand different problems. You're proud of your job and your peers recognise and appreciate that you're good at it.
+
+Now imagine your manager walks in with a machine that does 95% of your job for you. You no longer enjoy your work as all you have to do is press one button and the job is done. On top of that, your years of training now count for nothing. While I'm sure _Blizzard_ was concious of those unfortunate consequences, they happened all the same and a large amount of _World of Warcraft_ players felt brushed aside.
+
+#[
+
+
+
+
+
+
+
+
 Reden's a tool I've been working on recently that's intended to allow the ease of use of a Docker-powered, Vagrant-backed development environment accessible from anywhere with minimal set-up.
                         
 Firstly, let's see if Reden would be valuable to you. It allows you to:
