@@ -1,3 +1,19 @@
+/* Revival has a Philosophy page.
+
+The up-coming, dark-hearted MMORPG _Revival_ has a section of its website dedicated to the game's philosophy. This is probably the best thing since whatever the best thing was the last time I used this sentence.
+
+First off, _Revival_ is, as above, an MMORPG that's deep, man.  it's even got its own estate agents, [_Dunwich and Innsmouth_](https://www.revivalgame.com/store/housing).
+
+*/
+
+
+
+
+
+
+
+
+
 It feels as if there's a rising trend in game design whereby target audiences are identified, listened to and ditched; a good, sensible feature set is announced, followed by knee-jerk updates intended to appeal to the newer player.
 
 It's understandable; what _business_ would create a game that's exclusively played by a forever-diminishing group of people? I'm here to tell you that it's the _right_ one.

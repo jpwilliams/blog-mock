@@ -76,15 +76,24 @@ pre {
 .masthead .title:focus {
   outline: 0;
 }
+.preview-button {
+  position: fixed;
+  z-index: 2;
+  top: 30px;
+  right: 30px;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+}
+.preview-button:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
 .body {
   position: absolute;
   top: 100%;
   width: 100%;
   margin-top: 30px;
-}
-.body .preview {
-  margin: 0 auto;
-  width: 100px;
 }
 .body .input {
   padding: 30px;
@@ -92,7 +101,7 @@ pre {
   left: 50%;
   margin-left: 30px;
   margin-bottom: 50px;
-  width: 40%;
+  width: 45%;
   font-size: 18px;
   font-family: 'Open Sans', sans-serif;
   border: 0 none;
@@ -137,7 +146,7 @@ pre {
   padding: 30px;
   background: white;
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.1);
-  width: 40%;
+  width: 45%;
 }
 .body .footer {
   clear: both;
@@ -149,9 +158,6 @@ pre {
   width: 100%;
   height: 800px;
   font-size: 1.2em;
-}
-.body.editor {
-  margin-top: 80px;
 }
 .body.editor .content {
   margin-bottom: 50px;
