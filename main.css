@@ -19,6 +19,12 @@ pre {
   color: #555;
   background: #dedede;
 }
+code.inline {
+  background: #dfdfdf;
+  padding: 4px;
+  border-radius: 5px;
+  border: 1px solid #aaa;
+}
 .faded {
   opacity: 0.2;
   font-weight: 200;
