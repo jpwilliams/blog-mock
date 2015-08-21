@@ -107,6 +107,7 @@ pre {
     right: 30px;
     
     .button {
+        transition: 0.5s all;
         background: rgba(0, 0, 0, 0.4);
         padding: 10px;
         color: white;
@@ -114,6 +115,10 @@ pre {
 
         &:hover {
             background: rgba(0, 0, 0, 0.7);   
+        }
+        
+        &.saved {
+            background: rgba(0, 180, 0, 0.7);
         }
     }
 }
@@ -125,7 +130,7 @@ pre {
     margin-top: 30px;
     
     .input {
-        transition: 0.5s all;
+//        transition: 0.5s all;
         padding: 30px;
         box-sizing: border-box;
 //        position: absolute;
