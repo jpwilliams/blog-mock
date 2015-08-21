@@ -4,7 +4,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Open Sans', sans-serif;
-  min-height: 100%;
+  min-height: 200%;
   background: #fafafa;
   font-size: 18px;
 }
@@ -40,6 +40,18 @@ pre {
   min-width: 0;
   float: left;
   margin: 0 0 30px;
+  padding: 0 30px;
+  box-sizing: border-box;
+}
+.wrapper.full .section {
+  margin-left: 0;
+  width: 50%;
+  float: left;
+  padding: 30px;
+  box-sizing: border-box;
+}
+.wrapper.full .section:first-child {
+  margin-left: 0;
 }
 .nav {
   z-index: 3;
@@ -96,12 +108,11 @@ pre {
   margin-top: 30px;
 }
 .body .input {
+  transition: 0.5s all;
   padding: 30px;
-  position: absolute;
-  left: 50%;
-  margin-left: 30px;
+  box-sizing: border-box;
   margin-bottom: 50px;
-  width: 45%;
+  width: 100%;
   font-size: 18px;
   font-family: 'Open Sans', sans-serif;
   border: 0 none;
@@ -112,6 +123,7 @@ pre {
   outline: 0;
 }
 .body .content {
+  transition: 0.5s all;
   padding: 30px 30px 1px;
 }
 .body .content p {
@@ -141,12 +153,11 @@ pre {
   bottom: -16px;
 }
 .body .content.edit {
-  position: absolute;
-  right: 50%;
   padding: 30px;
   background: white;
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.1);
-  width: 45%;
+  width: 100%;
+  box-sizing: border-box;
 }
 .body .footer {
   clear: both;

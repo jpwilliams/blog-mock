@@ -17,8 +17,13 @@
         
         <div class="editor body">
             <div class="full wrapper">
-                <div class="content edit" id="content"></div>
-                <textarea class="input markdown" id="input"># Blank</textarea>
+                <div class="section">
+                    <div class="content edit" id="content"></div>
+                </div>
+                
+                <div class="section">
+                    <textarea class="input markdown" id="input"># Blank</textarea>
+                </div>
             </div>
         </div>
         
@@ -78,17 +83,17 @@
             }
             
             function preview () {
-                input.style['display'] = 'none'
+                input.parentElement.style['display'] = 'none'
                 content.className = 'content'
-                content.parentElement.className = 'solid wrapper'
+                content.parentElement.parentElement.className = 'solid wrapper'
                 
                 previewing = true
             }
             
             function unpreview () {
-                input.style['display'] = 'block'
+                input.parentElement.style['display'] = 'block'
                 content.className = 'content edit'
-                content.parentElement.className = 'full wrapper'
+                content.parentElement.parentElement.className = 'full wrapper'
                 
                 previewing = false
             }
