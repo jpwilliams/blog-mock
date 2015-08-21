@@ -100,18 +100,21 @@ pre {
     }
 }
 
-.preview-button {
+.floating-buttons {
     position: fixed;
     z-index: 2;
     top: 30px;
     right: 30px;
-    background: rgba(0, 0, 0, 0.4);
-    padding: 10px;
-    color: white;
-    text-decoration: none;
     
-    &:hover {
-        background: rgba(0, 0, 0, 0.7);   
+    .button {
+        background: rgba(0, 0, 0, 0.4);
+        padding: 10px;
+        color: white;
+        text-decoration: none;
+
+        &:hover {
+            background: rgba(0, 0, 0, 0.7);   
+        }
     }
 }
 
@@ -135,6 +138,7 @@ pre {
         border: 0 none;
         box-shadow: 0 0 15px 0 rgba(0,0,0,0.1);
         resize: none;
+        line-height: 2em;
         
         &:focus {
             outline: 0;
@@ -144,6 +148,7 @@ pre {
     .content {
         transition: 0.5s all;
         padding: 30px 30px 1px;
+        margin-bottom: 60px;
         
         p {
             color: #555;
@@ -152,6 +157,10 @@ pre {
             
             &:first-child {
                 margin-top: 0;
+            }
+            
+            &:last-child {
+                margin-bottom: 15px;
             }
         }
         
@@ -176,6 +185,7 @@ pre {
         }
         
         &.edit {
+            margin-bottom: 0;
             padding: 30px;
             background: white;
             box-shadow: 0 0 15px 0 rgba(0,0,0,0.1);
@@ -197,13 +207,7 @@ pre {
         }
     }
     
-    &.editor {
-//        margin-top: 80px;
-        
-        .content {
-            margin-bottom: 50px;   
-        }
-        
+    &.editor { 
         .footer {
             position: absolute;
             bottom: 0;

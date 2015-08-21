@@ -9,7 +9,10 @@
     </head>
     
     <body>
-        <a class="preview-button" href="#" id="preview">PREVIEW</a>
+        <div class="floating-buttons">
+            <a class="button" href="#" id="save">SAVED ✔</a>
+            <a class="button" href="#" id="preview">PREVIEW</a>
+        </div>
         
         <div class="masthead">
             <div contenteditable="true" class="title" id="title">Reden<br>[Re]mote [D]evelopment [En]vironment</div>
@@ -39,8 +42,6 @@
             var previewing = false
             
             function update_scroll () {
-                ticking = false
-                
                 if (marking || previewing) {
                     marking = false
                 } else {
@@ -54,16 +55,22 @@
                         var input_height = input.scrollHeight
 
                         var difference = content_height - input_height
+                        
+                        if (content_height < window_scroll_y) {
+                            input.style['margin-top'] = difference + 'px'
+                        } else {
+                            if (difference > 0) {
+                                var offset = difference * ((window_scroll_y - window_inner_height) / (content_height - window_inner_height))
 
-                        if (difference > 0) {
-                            var offset = difference * ((window_scroll_y - window_inner_height) / (content_height - window_inner_height))
-
-                            if (offset > 0) {
-                                input.style['margin-top'] = offset + 'px'
+                                if (offset > 0) {
+                                    input.style['margin-top'] = offset + 'px'
+                                }
                             }
                         }
                     }
-                }   
+                }
+                
+                ticking = false
             }
             
             function on_scroll () {
@@ -96,6 +103,8 @@
                 content.parentElement.parentElement.className = 'full wrapper'
                 
                 previewing = false
+                
+                on_scroll()
             }
 
             window.addEventListener('scroll', on_scroll, false);
