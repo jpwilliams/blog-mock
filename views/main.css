@@ -8,8 +8,20 @@ body {
   background: #fafafa;
   font-size: 18px;
 }
-ul {
+ul,
+ol {
   margin-left: 60px;
+  color: #555;
+}
+ul ul,
+ol ul,
+ul ol,
+ol ol {
+  margin: 15px 15px 0 0;
+}
+ul li,
+ol li {
+  margin-bottom: 15px;
 }
 pre {
   background: #222;
@@ -20,8 +32,9 @@ pre {
   background: #dedede;
 }
 code.inline {
-  background: #dfdfdf;
-  padding: 4px;
+  background: #eee;
+  color: brown;
+  padding: 2px 4px;
   border-radius: 5px;
   border: 1px solid #aaa;
 }
@@ -138,6 +151,13 @@ code.inline {
   transition: 0.5s all;
   padding: 30px 30px 1px;
   margin-bottom: 60px;
+}
+.body .content a {
+  text-decoration: none;
+  color: deepskyblue;
+}
+.body .content a:hover {
+  color: cornflowerblue;
 }
 .body .content p {
   color: #555;

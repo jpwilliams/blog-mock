@@ -149,6 +149,82 @@ function save () {
     foo()
 }
 
+var insert_tab = function (e) {
+    if (document.activeElement != input) return
+    
+    if (e.keyCode == 9) {
+        e.preventDefault()
+        
+        indent_selection(e.shiftKey)
+        
+        mark()
+    }
+}
+
+ function get_input_selection () {
+   if (document.selection) { //IE
+        input.selectedText = document.selection.createRange().text
+        input.selectionStart = input.value.indexOf(input.selectedText)
+        input.selectionEnd = input.selectionStart + input.selectedText.length
+      
+        if (input.selectionStart < 0) {
+            input.selectionStart = 0
+            input.selectionEnd = 0
+        }
+   } else if (input.selectionStart){ //FF
+        input.selectedText = input.value.substring(input.selectionStart,input.selectionEnd)
+   }
+  
+   return [input.selectionStart, input.selectionEnd]
+}
+
+function indent_selection (deindent) {
+    var selection
+    var new_value
+    
+    var start_end = get_input_selection()
+    var start = start_end[0]
+    var first_start = start
+    var end = start_end[1]
+    
+    var no_selection = !!(start == end)
+    
+    if (!no_selection || deindent) {
+        start = input.value.lastIndexOf('\n', start)
+        if (start == -1) start = 0
+
+        if (input.value.charAt(end - 1) == '\n') end = end - 1
+        end = input.value.indexOf('\n', end)
+        if (end == -1) end = input.value.length
+
+        selection = input.value.substring(start, end)
+
+        if (deindent) {
+            selection = selection.replace(/^(\t)/mg, '')
+        } else {
+            selection = selection.replace(/^(?=.+)/mg, '\t')
+        }
+    } else {
+        selection = '\t'
+    }
+    
+    new_value = input.value.substring(0, start)
+    new_value += selection
+    new_value += input.value.substring(end)
+    
+    input.value = new_value
+    
+    if (!no_selection) {
+        input.selectionStart = start + 1
+        input.selectionEnd = start + selection.length
+    } else {
+        input.selectionStart = deindent ? (first_start - 1) : (start + 1)
+        input.selectionEnd = input.selectionStart
+    }
+}
+ 
+
 mark()
 
 input.oninput = mark
+input.onkeydown = insert_tab

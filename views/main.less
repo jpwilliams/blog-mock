@@ -7,8 +7,17 @@ html, body {
     font-size: 18px;
 }
 
-ul {
+ul, ol {
     margin-left: 60px;
+    color: #555;
+    
+    ul, ol {
+        margin: 15px 15px 0 0;
+    }
+    
+    li {
+        margin-bottom: 15px;
+    }
 }
 
 pre {
@@ -21,8 +30,9 @@ pre {
 }
 
 code.inline {
-    background: #dfdfdf;
-    padding: 4px;
+    background: #eee;
+    color: brown;
+    padding: 2px 4px;
     border-radius: 5px;
     border: 1px solid #aaa;
 }
@@ -162,6 +172,15 @@ code.inline {
         padding: 30px 30px 1px;
         margin-bottom: 60px;
         
+        a {
+            text-decoration: none;
+            color: deepskyblue;
+            
+            &:hover {
+                color: cornflowerblue;   
+            }
+        }  
+        
         p {
             color: #555;
             margin: 45px 30px;
@@ -173,7 +192,7 @@ code.inline {
             
             &:last-child {
                 margin-bottom: 15px;
-            }
+            } 
         }
         
         .break {
