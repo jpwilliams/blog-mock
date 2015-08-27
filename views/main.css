@@ -132,6 +132,9 @@ code.inline {
   width: 100%;
   margin-top: 30px;
 }
+.body.top {
+  top: 0%;
+}
 .body .input {
   padding: 30px;
   box-sizing: border-box;

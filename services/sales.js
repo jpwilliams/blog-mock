@@ -1,5 +1,9 @@
+var debug = require('debug')('readable')
+
 module.exports = function (app) {
     app.get('/', function (req, res) {
-        return res.render('index.html')
+        debug('Hit usual home')
+
+        return res.render('blog.html')
     })
 }
